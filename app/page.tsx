@@ -25,7 +25,7 @@ export default function Home() {
   useEffect(() => {
     // Initialize WebSocket connection
     const wsUrl =
-      process.env.NEXT_PUBLIC_WS_URL ?? "wss://f47ea669bb4d.ngrok-free.app/ws";
+      process.env.NEXT_PUBLIC_WS_URL ?? "wss://0d354322f306.ngrok-free.app/ws";
     const ws = new WebSocket(wsUrl);
     wsRef.current = ws;
 
@@ -265,7 +265,6 @@ export default function Home() {
                   <div className="text-4xl font-bold text-white mb-1">
                     {counters[counterName]}
                   </div>
-                  <div className="text-blue-100 text-sm">Current Value</div>
                 </div>
 
                 {/* Control Buttons */}
