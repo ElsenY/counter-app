@@ -24,7 +24,9 @@ export default function Home() {
 
   useEffect(() => {
     // Initialize WebSocket connection
-    const ws = new WebSocket("wss://03c0ed47e75f.ngrok-free.app/ws");
+    const wsUrl =
+      process.env.NEXT_PUBLIC_WS_URL ?? "wss://f47ea669bb4d.ngrok-free.app/ws";
+    const ws = new WebSocket(wsUrl);
     wsRef.current = ws;
 
     ws.onopen = () => {
